@@ -43,7 +43,8 @@ Implementation Notes
 # * Adafruit's Register library: https://github.com/adafruit/Adafruit_CircuitPython_Register
 """
 
-# imports
-
 __version__ = "0.0.0-auto.0"
 __repo__ = "https://github.com/adafruit/Adafruit_CircuitPython_TestRepo.git"
+
+while True:
+    pass
