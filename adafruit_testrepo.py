@@ -46,5 +46,11 @@ Implementation Notes
 __version__ = "0.0.0-auto.0"
 __repo__ = "https://github.com/adafruit/Adafruit_CircuitPython_TestRepo.git"
 
-while True:
-    pass
+
+class Test:
+    """Test class."""
+    @staticmethod
+    def test():
+        """Test function."""
+        while True:
+            pass
