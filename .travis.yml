@@ -6,10 +6,10 @@
 dist: xenial
 language: python
 python:
-    - "3.6"
+  - "3.6"
 
 cache:
-    pip: true
+  pip: true
 
 deploy:
   - provider: releases
