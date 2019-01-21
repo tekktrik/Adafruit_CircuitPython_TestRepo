@@ -11,12 +11,6 @@ python:
 cache:
     pip: true
 
-# TODO: if deployment to PyPi is desired, change 'DEPLOY_PYPI' to "true",
-#       or remove the env block entirely and remove the condition in the
-#       deploy block.
-env:
-  - DEPLOY_PYPI="true"
-
 deploy:
   - provider: releases
     api_key: "$GITHUB_TOKEN"
@@ -34,7 +28,6 @@ deploy:
       secure: g8Ni3zefHq0vE3vsyBAxz5bqceF8jo829FcaBSoYDw4hqN46VZdJReRbBsktc/LcnrjDcYxLLFAQ6MpH+v0VpTko3ySeJoLIvrAPk81FYj+OfLnkRuL43uhYwtemMPK2Ggo6d73Rz0QEdnvGLYZ3wXRsYU6l8AU3OjBG1+CS03R87yRae/gMCYSoxskwcX0y+UHmk4Sgyors2y5Jkbn91jiPb/hOgtstI0Z7OJyH7UdCJ7CnxnDfp3ONdjHmVUHygQ+ZpH+9fNXvbZiRbHYh7e0rBRcabi7C78v/KsfeO/R19DjB76aOxld5guim7dGOW59TAI64aQA+M3jjxwgegUtdOdX5wu+HqvUUOe5iKCF1FSJRP69xL1EinlIExOQ94SLG1GBPgXhavFbFI9BxCieIMNoJBUQYMkjvFK3rePXS3bzfEVyUFfTTq0D7mog0y3FBR34jTWxRVlD2O2WT5gMZtOqkrzHgDasx/E4j8TP4J07o4oRs65Lat5qUBdlO6PzMFmaP9NgbryayOcycoNL3TMzmJghOV0o6H/07dUhHH1Qswy6Na77EHffrwOV9yRkNWa87qTkLWXXj984l6Yla0gpwKVFXnlamjw1tJ/rxW8WQ7bmCXBGw1zT+fW6ZSJvj3VHvglXWV8IZN3VBDN/4g3MwSlFLWKxKcxlKacM=
     on:
       tags: true
-      condition: $DEPLOY_PYPI = "true"
 
 install:
   - pip install -r requirements.txt
