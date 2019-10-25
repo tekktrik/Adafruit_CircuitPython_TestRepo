@@ -14,10 +14,10 @@ jobs:
       env:
         GITHUB_CONTEXT: ${{ toJson(github) }}
       run: echo "$GITHUB_CONTEXT"
-    - name: Set up Python 3.5
+    - name: Set up Python 3.6
       uses: actions/setup-python@v1
       with:
-        python-version: 3.5
+        python-version: 3.6
     - name: Versions
       run: |
         python3 --version
@@ -39,5 +39,4 @@ jobs:
       run: circuitpython-build-bundles --filename_prefix adafruit-circuitpython-testrepo --library_location .
     - name: Build docs
       working-directory: docs
-      run: sphinx-build -E -W -b html . _build/html 
-
+      run: sphinx-build -E -W -b html . _build/html
