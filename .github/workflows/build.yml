@@ -1,0 +1,37 @@
+name: Build CI
+
+on:
+  pull_request:
+  push:
+  release:
+    types: [published]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Dump GitHub context
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+      run: echo "$GITHUB_CONTEXT"
+    - name: Set up Python 3.5
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.5
+    - name: Install deps
+      run: |
+        pip install -r requirements.txt
+        pip install circuitpython-build-tools Sphinx sphinx-rtd-theme
+        pip install --force-reinstall pylint==1.9.2
+    - name: Versions
+      run: |
+        gcc --version
+        python3 --version
+    - uses: actions/checkout@v1
+      with:
+        submodules: true
+    - name: CircuitPython version
+      run: git describe --dirty --always --tags
+    - name: PyLint
+      run: pylint adafruit_testrepo.py
+
