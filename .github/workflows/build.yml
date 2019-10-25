@@ -25,7 +25,6 @@ jobs:
         pip install --force-reinstall pylint==1.9.2
     - name: Versions
       run: |
-        gcc --version
         python3 --version
     - uses: actions/checkout@v1
       with:
