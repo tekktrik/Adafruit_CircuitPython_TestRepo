@@ -34,13 +34,12 @@ jobs:
       run: sphinx-build -E -W -b html . _build/html
     - name: Upload Release Assets
       # the 'official' actions version does not yet support dynamically
-      # supplying asset names to upload. I chose @csexton's version as discussed
-      # in the following issue, as its the simplest to implement.
+      # supplying asset names to upload. @csexton's version chosen based on
+      # discussion in the issue below, as its the simplest to implement and
+      # allows for selecting files with a pattern.
       # https://github.com/actions/upload-release-asset/issues/4
       #uses: actions/upload-release-asset@v1.0.1
       uses: csexton/release-asset-action@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         pattern: "bundles/*"
-        github-token: GITHUB_TOKEN
+        github-token: ${{ secrets.GITHUB_TOKEN }}
