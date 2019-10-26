@@ -1,11 +1,11 @@
-name: Build Bundle For Release
+name: Release Actions
 
 on:
   release:
     types: [published]
 
 jobs:
-  test:
+  upload-release-assets:
     runs-on: ubuntu-latest
     steps:
     - name: Dump GitHub context
@@ -43,3 +43,23 @@ jobs:
       with:
         pattern: "bundles/*"
         github-token: ${{ secrets.GITHUB_TOKEN }}
+
+  upload-pypi:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up Python
+      uses: actions/setup-python@v1
+      with:
+        python-version: '3.x'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install setuptools wheel twine
+    - name: Build and publish
+      env:
+        TWINE_USERNAME: ${{ secrets.pypi_username }}
+        TWINE_PASSWORD: ${{ secrets.pypi_password }}
+      run: |
+        python setup.py sdist
+        twine upload dist/*
