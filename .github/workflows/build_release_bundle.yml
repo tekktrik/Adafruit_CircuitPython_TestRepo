@@ -1,0 +1,46 @@
+name: Build Bundle For Release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Dump GitHub context
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+      run: echo "$GITHUB_CONTEXT"
+    - name: Set up Python 3.6
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.6
+    - name: Versions
+      run: |
+        python3 --version
+    - uses: actions/checkout@v1
+      with:
+        submodules: true
+    - name: Install deps
+      run: |
+        sudo apt-get install -y gettext
+        pip install -r requirements.txt
+        pip install circuitpython-build-tools Sphinx sphinx-rtd-theme
+    - name: Build assets
+      run: circuitpython-build-bundles --filename_prefix adafruit-circuitpython-testrepo --library_location .
+    - name: Build docs
+      working-directory: docs
+      run: sphinx-build -E -W -b html . _build/html
+    - name: Upload Release Assets
+      # the 'official' actions version does not yet support dynamically
+      # supplying asset names to upload. I chose @csexton's version as discussed
+      # in the following issue, as its the simplest to implement.
+      # https://github.com/actions/upload-release-asset/issues/4
+      #uses: actions/upload-release-asset@v1.0.1
+      uses: csexton/release-asset-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        pattern: "bundles/*"
+        github-token: GITHUB_TOKEN
