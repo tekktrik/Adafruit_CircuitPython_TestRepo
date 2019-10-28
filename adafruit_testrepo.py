@@ -39,8 +39,6 @@ Implementation Notes
 * Adafruit CircuitPython firmware for the supported boards:
   https://github.com/adafruit/circuitpython/releases
 
-# * Adafruit's Bus Device library: https://github.com/adafruit/Adafruit_CircuitPython_BusDevice
-# * Adafruit's Register library: https://github.com/adafruit/Adafruit_CircuitPython_Register
 """
 
 __version__ = "0.0.0-auto.0"
@@ -49,8 +47,22 @@ __repo__ = "https://github.com/adafruit/Adafruit_CircuitPython_TestRepo.git"
 
 class Test:
     """Test class."""
+
+    def __init__(self):
+        self._test_value = "Untested"
+
+
     @staticmethod
     def test():
         """Test function."""
         while True:
             pass
+
+    @property
+    def test_property(self):
+        """Test property"""
+        return self._test_value
+
+    @test_property.setter
+    def test_property(self, value):
+        self._test_value = value
