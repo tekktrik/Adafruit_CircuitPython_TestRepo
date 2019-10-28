@@ -34,7 +34,7 @@ jobs:
       run: |
         sudo apt-get install -y gettext
         pip install -r requirements.txt
-        pip install circuitpython-build-tools Sphinx sphinx-rtd-theme
+        pip install circuitpython-build-tools
     - name: Build assets
       run: circuitpython-build-bundles --filename_prefix ${{ steps.repo-name.outputs.repo-name }} --library_location .
     - name: Upload Release Assets
