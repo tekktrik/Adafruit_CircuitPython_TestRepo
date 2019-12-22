@@ -9,7 +9,7 @@ Introduction
     :target: https://discord.gg/nBQh6qu
     :alt: Discord
 
-.. image:: https://github.com.com/adafruit/Adafruit_CircuitPython_TestRepo/workflows/Build%20CI/badge.svg
+.. image:: https://github.com/adafruit/Adafruit_CircuitPython_TestRepo/workflows/Build%20CI/badge.svg
     :target: https://github.com.com/adafruit/Adafruit_CircuitPython_TestRepo/actions
     :alt: Build Status
 
