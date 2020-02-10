@@ -15,3 +15,6 @@ class PuffDetector:
         self.min_pressure = min_pressure
         self.display_timeout = display_timeout
         self.config_filename = config_filename
+
+    def fake(self):
+        pass
