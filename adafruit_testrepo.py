@@ -51,7 +51,6 @@ class Test:
     def __init__(self):
         self._test_value = "Untested"
 
-
     @staticmethod
     def test():
         """Test function."""
