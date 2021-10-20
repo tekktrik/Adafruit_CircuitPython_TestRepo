@@ -31,6 +31,11 @@ Usage Example
 
 Repo is for test purposes only.
 
+Documentation
+=============
+
+API documentation for this library can be found on `Read the Docs <https://circuitpython.readthedocs.io/projects/testrepo/en/latest/>`_.
+
 Contributing
 ============
 
