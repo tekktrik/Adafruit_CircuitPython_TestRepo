@@ -32,7 +32,6 @@ repos:
         -   id: pylint
             name: pylint (example code)
             description: Run pylint rules on "examples/*.py" files
-            entry: pylint
             types: [python]
             files: "^examples/"
             args:
@@ -43,7 +42,6 @@ repos:
         -   id: pylint
             name: pylint (test code)
             description: Run pylint rules on "tests/*.py" files
-            entry: pylint
             types: [python]
             files: "^tests/"
             args:
