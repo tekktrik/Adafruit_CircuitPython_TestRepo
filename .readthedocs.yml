@@ -1,7 +1,0 @@
-# SPDX-FileCopyrightText: 2019 Kattni Rembor for Adafruit Industries
-#
-# SPDX-License-Identifier: Unlicense
-
-python:
-    version: 3
-requirements_file: requirements.txt
