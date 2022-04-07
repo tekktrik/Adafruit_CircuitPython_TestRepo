@@ -1,0 +1,3 @@
+# This is a file created for testing the Adabot patch process without applying it to multiple libraries.
+entry_one = 1
+entry_two = 2
