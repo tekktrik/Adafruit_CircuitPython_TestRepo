@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Run Build CI workflow
-      uses: adafruit/workflows-circuitpython-libs/build@main
+      uses: adafruit/workflows-circuitpython-libs/build@test
