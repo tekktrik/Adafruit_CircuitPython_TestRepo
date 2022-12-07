@@ -22,6 +22,11 @@ Implementation Notes
 * Adafruit CircuitPython firmware for the supported boards:
   https://github.com/adafruit/circuitpython/releases
 
+note::
+
+    PyPI will reject a release if no source code has changed.
+    Please increment this counter if needed: 1
+
 """
 
 __version__ = "0.0.0-auto.0"
