@@ -25,7 +25,7 @@ Implementation Notes
 note::
 
     PyPI will reject a release if no source code has changed.
-    Please increment this counter if needed: 4
+    Please increment this counter if needed: 5
 
 """
 
