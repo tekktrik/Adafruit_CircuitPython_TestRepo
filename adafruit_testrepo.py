@@ -40,7 +40,7 @@ class Test:
         self._test_value = "Untested"
 
     @staticmethod
-    def test():
+    def test(): 
         """Test function."""
         while True:
             pass
