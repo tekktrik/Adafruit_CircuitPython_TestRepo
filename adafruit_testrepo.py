@@ -45,7 +45,7 @@ class Test:
         while True:
             pass
 
-    def test_method(self):
+    def test_method(self): 
         """Test method."""
         return "Test value {}".format(self._test_value)
 
