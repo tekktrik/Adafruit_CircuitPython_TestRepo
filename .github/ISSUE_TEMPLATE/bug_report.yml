@@ -10,14 +10,14 @@ body:
   - type: markdown
     id: intro
     attributes:
-      value: |
+      value: >-
         Thanks for using this library!  If you've encountered a bug,
         please use this form to submit a report to help us improve.
   - type: input
     id: library_version
     attributes:
       label: Library version
-      description: |
+      description: >-
         You can find the library version by importing the library in
         the REPL and using the `__version__` attribute.  For example,
         `import adafruit_bme680`, then `adafruit_bme680.__version__`.
@@ -28,7 +28,7 @@ body:
     id: firmware_version
     attributes:
       label: CircuitPython version
-      description: |
+      description: >-
         The version of CircuitPython you're running. You can see it
         in the `boot_out.txt` file, as well as when you first enter
         the `REPL`.
@@ -40,7 +40,7 @@ body:
     id: code
     attributes:
       label: Code / REPL
-      description: |
+      description: >-
         The code that is causing the issue.  This will automatically
         as Python when the form as submitted.
       placeholder: |
@@ -69,7 +69,7 @@ body:
     id: reproducible
     attributes:
       label: Minimum reproducible code
-      description: |
+      description: >-
         If you are able to provide the least amount of code to reproduce
         the issue, it may help us solve the problem faster.  This will
         also render as Python when submitted.
@@ -89,7 +89,7 @@ body:
     id: behavior
     attributes:
       label: Behavior
-      description: |
+      description: >-
         Describe the behavior of the device as it relates to the bug. This
         may include any exceptions raised, hardware changes (motor stalls),
         or other details related to the failure. Use backticks for any code.
@@ -105,7 +105,7 @@ body:
     id: additional
     attributes:
       label: Description / Additional information
-      description: |
+      description: >-
         You can add any additional information that would be helpful here.
         For example, if your board has multiple revisions, you can add which
         one you are using here.  Similarly, if you have a specific hardware
