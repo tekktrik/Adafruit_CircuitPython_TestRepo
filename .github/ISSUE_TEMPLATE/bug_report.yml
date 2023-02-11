@@ -62,7 +62,7 @@ body:
     attributes:
       label: Minimum reproducible code
       description: >-
-        Provide the least amount of code to reproduce the issue
+        The least amount of code needed to reproduce the issue
         - it may help us solve the problem faster.  This will render as
         Python when submitted.
       placeholder: |
