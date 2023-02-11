@@ -1,0 +1,112 @@
+# SPDX-FileCopyrightText: 2023 Alec Delaney, written for Adafruit Industries
+#
+# SPDX-License-Identifier: MIT
+
+name: 🐞 Bug Report
+description: Createa bug report to help us improve
+labels:
+  - bug
+body:
+  - type: markdown
+    id: intro
+    attributes:
+      value: |
+        Thanks for using this library!  If you've encountered a bug,
+        please use this form to submit a report to help us improve.
+  - type: input
+    id: library_version
+    attributes:
+      label: Library version
+      description: |
+        You can find the library version by importing the library in
+        the REPL and using the `__version__` attribute.  For example,
+        `import adafruit_bme680`, then `adafruit_bme680.__version__`.
+      placeholder: 1.2.3
+    validations:
+      required: true
+  - type: input
+    id: firmware_version
+    attributes:
+      label: CircuitPython version
+      description: |
+        The version of CircuitPython you're running. You can see it
+        in the `boot_out.txt` file, as well as when you first enter
+        the `REPL`.
+      placeholder: |
+        Adafruit CircuitPython 8.0.0 on 2023-02-10; Raspberry Pi Pico with rp2040
+    validations:
+      required: true
+  - type: textarea
+    id: code
+    attributes:
+      label: Code / REPL
+      description: |
+        The code that is causing the issue.  This will automatically
+        as Python when the form as submitted.
+      placeholder: |
+        import time
+        import board
+        import adafruit_bme680
+
+        i2c = board.I2C()
+        bme680 = adafruit_bme680.Adafruit_BME680_I2C(i2c)
+
+        bme680.sea_level_pressure = 1013.25
+        temperature_offset = -5
+
+        while True:
+            print("\nTemperature: %0.1f C" % (bme680.temperature + temperature_offset))
+            print("Gas: %d ohm" % bme680.gas)
+            print("Humidity: %0.1f %%" % bme680.relative_humidity)
+            print("Pressure: %0.3f hPa" % bme680.pressure)
+            print("Altitude = %0.2f meters" % bme680.altitude)
+
+            time.sleep(1)
+      render: python
+    validations:
+      required: true
+  - type: textarea
+    id: reproducible
+    attributes:
+      label: Minimum reproducible code
+      description: |
+        If you are able to provide the least amount of code to reproduce
+        the issue, it may help us solve the problem faster.  This will
+        also render as Python when submitted.
+      placeholder: |
+        import board
+        import adafruit_bme680
+
+        i2c = board.I2C()
+        bme680 = adafruit_bme680.Adafruit_BME680_I2C(i2c)
+
+        bme680.sea_level_pressure = 1013.25
+        temperature_offset = -5
+
+        print(bme680.pressure)
+      render: python
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Behavior
+      description: |
+        Describe the behavior of the device as it relates to the bug. This
+        may include any exceptions raised, hardware changes (motor stalls),
+        or other details related to the failure. Use backticks for any code.
+      placeholder: |
+        ```shell
+        Traceback (most recent call last):
+          File "<stdin>", line 1, in <module>
+          RuntimeError: Failed to find BME680!  Chip ID 0xA3
+        ```
+    validations:
+      required: true
+  - type: textarea
+    id: additional
+    attributes:
+      label: Description / Additional information
+      description: |
+        You can add any additional information that would be helpful here.
+        For example, if your board has multiple revisions, you can add which
+        one you are using here.  Similarly, if you have a specific hardware
+        setup, you can describe it here.
