@@ -13,7 +13,7 @@ body:
       value: >-
         Thanks for using this library!  If you've encountered a bug,
         please use this form to submit a report to help us improve.
-        Be sure to check the other issues for this library to see if
+        Be sure to check the [other issues](../issues) for this library to see if
         one already exists for your bug!
   - type: input
     id: library_version
