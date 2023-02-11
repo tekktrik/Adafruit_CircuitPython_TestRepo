@@ -62,9 +62,9 @@ body:
     attributes:
       label: Minimum reproducible code
       description: >-
-        If you are able to provide the least amount of code to reproduce
-        the issue, it may help us solve the problem faster.  This will
-        also render as Python when submitted.
+        If you can, provide the least amount of code to reproduce the issue
+        - it may help us solve the problem faster.  This will render as
+        Python when submitted.
       placeholder: |
         import board
         import adafruit_bme680
