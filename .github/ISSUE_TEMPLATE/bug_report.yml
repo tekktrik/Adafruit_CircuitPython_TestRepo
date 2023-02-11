@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: MIT
 
 name: 🐞 Bug Report
-description: Createa bug report to help us improve
+description: Create a bug report to help us improve
 labels:
   - bug
 body:
