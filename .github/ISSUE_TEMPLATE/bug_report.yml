@@ -21,7 +21,8 @@ body:
       label: Library version
       description: >-
         You can find the library version by importing the library in
-        the REPL and using the `__version__` attribute.  For example,
+        [the REPL](https://learn.adafruit.com/welcome-to-circuitpython/the-repl)
+        and using the `__version__` attribute.  For example,
         `import adafruit_bme680`, then `adafruit_bme680.__version__`.
       placeholder: 1.2.3
     validations:
