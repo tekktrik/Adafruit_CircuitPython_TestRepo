@@ -13,6 +13,8 @@ body:
       value: >-
         Thanks for using this library!  If you've encountered a bug,
         please use this form to submit a report to help us improve.
+        Be sure to check the other issues for this library to see if
+        one already exists for your bug!
   - type: input
     id: library_version
     attributes:
@@ -110,3 +112,11 @@ body:
         For example, if your board has multiple revisions, you can add which
         one you are using here.  Similarly, if you have a specific hardware
         setup, you can describe it here.
+  - type: markdown
+    id: coc
+    attributes:
+      value: >-
+        Thanks for the report!  Note that we use the [Adafruit Community Code
+        of Conduct](https://github.com/adafruit/Adafruit_Community_Code_of_Conduct/blob/main/code-of-conduct.md)
+        along with community contributions like these to keep CircuitPython
+        for everyone!
