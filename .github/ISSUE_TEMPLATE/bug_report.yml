@@ -92,9 +92,7 @@ body:
       label: Description / Additional information
       description: >-
         You can add any additional information that would be helpful here.
-        For example, if your board has multiple revisions, you can add which
-        one you are using here.  Similarly, if you have a specific hardware
-        setup, you can describe it here.
+        For example, if your board has multiple revisions or specific hardware.
   - type: markdown
     id: coc
     attributes:
