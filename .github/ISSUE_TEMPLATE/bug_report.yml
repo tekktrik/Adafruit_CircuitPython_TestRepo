@@ -79,7 +79,7 @@ body:
         Describe the behavior of the device as it relates to the bug, including
         any exceptions raised and hardware faults.  Use backticks for any code.
       placeholder: |
-        ```shell
+        ```
         Traceback (most recent call last):
           File "<stdin>", line 1, in <module>
           RuntimeError: Failed to find BME680!  Chip ID 0xA3
