@@ -76,9 +76,8 @@ body:
     attributes:
       label: Behavior
       description: >-
-        Describe the behavior of the device as it relates to the bug. This
-        may include any exceptions raised, hardware changes (motor stalls),
-        or other details related to the failure. Use backticks for any code.
+        Describe the behavior of the device as it relates to the bug, including
+        any exceptions raised and hardware faults.  Use backticks for any code.
       placeholder: |
         ```shell
         Traceback (most recent call last):
